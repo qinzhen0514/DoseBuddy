@@ -413,7 +413,7 @@ if user_query is not None and user_query != "":
     download_str.append('DoseBuddy: ' + answer)
 
 # Keep Conversation History
-with st.container(height=1000, border=False):
+with st.container(height=600, border=False):
     st.write("Conversation")
     for message in st.session_state.chat_history:
         if isinstance(message, AIMessage):
