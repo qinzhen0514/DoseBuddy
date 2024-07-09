@@ -416,9 +416,9 @@ if user_query is not None and user_query != "":
 with st.container(height=600, border=False):
     st.write("Conversation")
     for message in st.session_state.chat_history:
-        if isinstance(message, AIMessage):
+        if isinstance(message, HumanMessage):
             st.info(message.content, icon="🧐")
-        elif isinstance(message, HumanMessage):
+        elif isinstance(message, AIMessage):
             st.success(message.content, icon="🤖")
     
     download_txt = '\n\n'.join(download_str)
